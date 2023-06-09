@@ -70,6 +70,12 @@
                                 </a>
                             </li> 
                         </ul>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.technologys.index' ? 'bg-secondary' : '' }}"
+                                href="{{ route('admin.technologys.index') }}">
+                                <i class="fa-solid fa-microchip"></i> Tecnologie
+                            </a>
+                        </li> --}}
 
 
                     </div>
