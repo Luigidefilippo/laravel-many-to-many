@@ -48,11 +48,12 @@ class ProjectController extends Controller
         $data = $request->validated();
         $data['slug'] = Str::slug($data['title']);
         $project = Project::create($data);
-        return redirect()->route('admin.projects.index');
+        
 
         if($request->has('technologys')){
             $project->technologys()->attach($request->technologys);
         }
+        return redirect()->route('admin.projects.index');
     }
 
     /**
@@ -91,7 +92,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         $data['slug'] = Str::slug($data['title']);
         $project->update($data);
-
+        
         if($request->has('technologys')){
             $project->technologys()->sync($request->technologys);
         }else{

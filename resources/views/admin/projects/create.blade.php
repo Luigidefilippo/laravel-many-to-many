@@ -18,7 +18,6 @@
         <h5>Seleziona le tecnologie</h5>
         @foreach ($technologys as $technology)
             <div class="form-check">
-
                 <input type="checkbox" class="form-check-input" name="technologys[]" value="{{$technology->id}}" id="technology-{{$technology->id}}" @checked(in_array($technology->id , old('technologys' , [])))>
                 <label for="technology-{{$technology->id}}" class="form-check-label">{{$technology->name}}</label>
             </div>

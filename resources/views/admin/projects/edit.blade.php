@@ -22,7 +22,7 @@
         <h5>Technology</h5>
         @foreach ($technologys as $technology)
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="technologys[]" value="{{$technology->id}}" id="technology-{{$technology->id}}" @checked(old('technologys') ? in_array($technology->id , old('technologys' , [])) : $project->technology->contains($technology)) >
+            <input class="form-check-input" type="checkbox" name="technologys[]" value="{{$technology->id}}" id="technology-{{$technology->id}}" @checked(old('technologys') ? in_array($technology->id , old('technologys' , [])) : $project->technologys->contains($technology)) >
             <label for="technology-{{$technology->id}}" class="form-check-label">{{$technology->name}}</label>
         </div>
             
