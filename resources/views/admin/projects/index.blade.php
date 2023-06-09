@@ -26,7 +26,13 @@
                 <th scope="row">{{ $project->id }}</th>
                 <td>{{ $project->title }}</td>
                 <td>{{$project->type?->name}}</td>
-                <td>{{$project->technology?->name}}</td>
+                 <td>
+                    @forelse ($project->technologys as $technology)
+                        {{$technology->name}}
+                    @empty
+                        Non specificato
+                    @endforelse 
+                </td>
                 <td>{{ $project->slug }}</td>
                 <td>
                     <div class="container d-flex flex-row  ">

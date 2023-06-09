@@ -7,14 +7,14 @@
     @if ($project->type)
     <p class="text-center">{{ $project->type?->name }}</p>
     @else
-    <p class="text-center">Non è impostata nessuna categoria</p>
+    <p class="text-center">Non è impostata nessun Type</p>
     @endif
 </div>
 <div>
     <h5>Techonologies</h5>
     <ul>
         @forelse ($project->technologys as $technology)
-            <li>{{$techonolgy->name}}</li>
+            <li>{{$technology->name}}</li>
         @empty
             <li>Nessuna tecnologia presente</li>
         @endforelse
