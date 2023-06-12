@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ProjectController extends Controller
@@ -47,6 +48,12 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $data['slug'] = Str::slug($data['title']);
+        
+        if($request->hasFile('image')){
+            $path = Storage::disk('public')->put('project_images' , $request->image);
+            $data['image'] = $path; 
+        }
+
         $project = Project::create($data);
         
 
