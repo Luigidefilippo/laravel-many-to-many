@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<form action="{{ route('admin.projects.store') }}" method="POST">
+<form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -38,7 +38,10 @@
         <textarea class="form-control" value="{{old('description')}}" id="description" name='description' rows="3" ></textarea>
     </div>
 
-    
+    <div class="mb-3">
+        <label for="image" class="form-label">Immagine</label>
+        <input type="file" class="form-control" id="image" name="image">
+    </div>
 
     <button type="submit" class="btn btn-primary">invia</button>
 </form>
