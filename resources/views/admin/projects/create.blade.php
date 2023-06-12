@@ -37,6 +37,9 @@
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" value="{{old('description')}}" id="description" name='description' rows="3" ></textarea>
     </div>
+
+    
+
     <button type="submit" class="btn btn-primary">invia</button>
 </form>
 
