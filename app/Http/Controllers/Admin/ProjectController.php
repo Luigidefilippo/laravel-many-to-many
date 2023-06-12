@@ -98,6 +98,16 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $data['slug'] = Str::slug($data['title']);
+        if ($request->hasFile('image')) {
+            
+            if ($project->image) {
+                Storage::delete($project->image);
+            }
+
+            $path = Storage::disk('publick')->put('project_images' , $request->image);
+            $data['image']=$path;
+           
+        }
         $project->update($data);
         
         if($request->has('technologys')){

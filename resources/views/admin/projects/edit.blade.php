@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<form action="{{ route('admin.projects.update', $project->slug) }}" method="POST">
+<form action="{{ route('admin.projects.update', $project->slug) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="mb-3">
@@ -32,6 +32,17 @@
         <label for="description" class="form-label">content</label>
         <textarea class="form-control"  id="description" name='description' rows="3">{{old('description', $project->description)}}</textarea>
     </div>
+
+    <div class="mb-3">
+        <label for="image" class="form-label">Immagine</label>
+        <input type="file" class="form-control" id="image" name="image">
+
+        @if ($project->image)
+        <img src="{{asset('storage/' . $project->image)}}" alt="{{$project->title}}">
+            
+        @endif
+    </div>
+
     <button type="submit" class="btn btn-success">invia</button>
 </form>
 @endsection
