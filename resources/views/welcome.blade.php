@@ -1,27 +1,326 @@
 @extends('layouts.app')
 @section('content')
+<div class="container  mt-3">
+    <div class="social-links justify-content-end">
+		<div id="twitter" class="social-btn flex-center">
+			<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg><span>Register</span>
+		</div>
+	
+		<div id="linkedin" class="social-btn flex-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24zM352 224a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm-96 96c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H256z"/></svg><span>Login</span>
+		</div>
 
-<div class="jumbotron p-5 mb-4 bg-light rounded-3">
-    <div class="container py-5">
-        <div class="logo_laravel">
-            <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-25">
-                <g clip-path="url(#clip0)" fill="#EF3B2D">
-                    <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z" />
-                </g>
-            </svg>
+</div>
+</div>
+<div class="text-center mt-5"><h2>Con Boolbnb Start , mettere casa su BoolBnB è facile</h2></div>
+<div class="container-fluid text-center  mt-5 mb-5">
+    <h1>IMG</h1>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Ricevi supporto individuale da un Superhost</h5>
+            <p>Ti metteremo in contatto con un Superhost della tua zona, che ti guiderà dalla prima domanda al primo ospite tramite telefono, videochiamata o chat.</p>
         </div>
-        <h1 class="display-5 fw-bold">
-            Welcome to Laravel+Bootstrap 5
-        </h1>
-
-        <p class="col-md-8 fs-4">This a preset package with Bootstrap 5 views for laravel projects including laravel breeze/blade. It works from laravel 9.x to the latest release 10.x</p>
-        <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg" type="button">Documentation</a>
+        <div class="col-md-4">
+            <h5>Un ospite esperto per la tua prima prenotazione</h5>
+            <p>Per la tua prima prenotazione, puoi decidere di accogliere un ospite esperto che vanta almeno tre soggiorni e una serie di recensioni positive su Airbnb.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Supporto Airbnb specializzato</h5>
+            <p>In caso di problemi, ad esempio con l'account o la fatturazione, i nuovi host possono accedere con un solo clic agli agenti del Community support, che sono stati appositamente formati per aiutarti.</p>
+        </div>
     </div>
 </div>
+<div class="container d-flex justify-content-center mt-5 ">
+    <h3 class=" text-danger">Bool</h3>
+    <h3>BnB</h3>
+</div>
 
-<div class="content">
+<div class="container mt-3">
+    <h2>Pubblica il tuo annuncio su BoolBnB e aprofitta di una protezione completa</h2>
+</div>
+<table class="table container ">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">BoolBnB</th>
+        <th scope="col">Concorrenti</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="row"></th>
+        <td>
+            <h5>Verifica dell'identità dell'ospite</h5>
+            <p>Il nostro sistema di verifica completo esamina dettagli quali nome, <br>indirizzo, documento identificativo e altro per confermare<br> l'identità degli ospiti che prenotano su Airbnb.</p>
+        </td>
+        <td>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#00A506;stroke-width:5.333333333333333;overflow:visible" aria-label="Airbnb inclusa" role="img" focusable="false"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg>
+        </td>
+        <td>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#00A506;stroke-width:5.333333333333333;overflow:visible" aria-label="Airbnb inclusa" role="img" focusable="false"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg>
+        </td>
+
+
+        <tr>
+            <th scope="row"></th>
+            <td>
+                <h5>Protezione dai danni fino a 3.000.000 USD</h5>
+                <p>Airbnb ti rimborsa per i danni causati dagli ospiti al tuo alloggio e ai tuoi effetti personali, <br>e include queste protezioni specifiche:.</p>
+            </td>
+            <td><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#00A506;stroke-width:5.333333333333333;overflow:visible" aria-label="Airbnb inclusa" role="img" focusable="false"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg>
+            </td>
+            <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#E12C32;stroke-width:5.333333333333333;overflow:visible" aria-label="Concorrenti non inclusi" role="img" focusable="false"><path d="m6 6 20 20M26 6 6 26"></path></svg>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th scope="row"></th>
+            <td>
+                <h5>Supporto sicurezza H24</h5>
+                <p>Se non ti senti al sicuro, puoi contattare direttamente dall'app<br> i nostri operatori di sicurezza appositamente formati, disponibili sia di giorno che di notte.</p>
+            </td>
+            <td><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#00A506;stroke-width:5.333333333333333;overflow:visible" aria-label="Airbnb inclusa" role="img" focusable="false"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg>
+            </td>
+            <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#E12C32;stroke-width:5.333333333333333;overflow:visible" aria-label="Concorrenti non inclusi" role="img" focusable="false"><path d="m6 6 20 20M26 6 6 26"></path></svg>
+            </td>
+        </tr>
+
+
+        <tr> 
+            <th scope="row"></th>
+            <td>
+                <h5>Assicurazione di responsabilità civile fino a 1.000.000 USD</h5>
+                <p>Ti proteggiamo nel raro caso in cui un ospite si faccia male o i suoi<br> effetti personali vengano danneggiati o rubati.</p>
+            </td>
+            <td><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#00A506;stroke-width:5.333333333333333;overflow:visible" aria-label="Airbnb inclusa" role="img" focusable="false"><path fill="none" d="m4 16.5 8 8 16-16"></path></svg>
+            </td>
+            <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:24px;width:24px;stroke:#E12C32;stroke-width:5.333333333333333;overflow:visible" aria-label="Concorrenti non inclusi" role="img" focusable="false"><path d="m6 6 20 20M26 6 6 26"></path></svg>
+            </td>
+        </tr>
+
+    </tbody>
+    
+  </table>
+  <div class="container mt-2">
+    <p>Il confronto si basa sulle informazioni disponibili al pubblico e sulle offerte gratuite dei principali concorrenti<br>nel mese di ottobre 2022. Per scoprire dettagli ed eccezioni clicca <a href="#">qui</a>
+    </p>
+  </div>
+  <div class="container text-center">
+    <button type="button" class="btn btn-outline-dark btn-transparent m-3">Scopri di più</button>
+  </div>
+  <div class="container-fluid bg-light py-5">
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Le Risposte<br> alle tue domande</h2>
+            </div>
+            <div class="col-lg-6">
+                <div id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <h5 class="mb-0">Il mio alloggio è adatto a BoolBnB? <i class="bi bi-chevron-down"></i></h5>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse mt-3" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Gli ospiti Airbnb sono interessati a tutti i tipi di alloggi. Abbiamo annunci<br> per minicase, baite, case sull'albero e altro ancora. Anche una stanza<br> in più può essere un'ottima soluzione per un soggiorno.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <hr class="my-3">
+        
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <h5 class="mb-0">La disponibilità del mio alloggio deve essere costante? <i class="bi bi-chevron-down"></i></h5>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse mt-3" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Assolutamente no: hai tu il controllo totale sul tuo calendario. Puoi<br> affittare il tuo spazio una volta all'anno, qualche notte al mese o più<br> spesso.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-3">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <h5 class="mb-0">Quanto dovrei interagiere con gli ospiti <i class="bi bi-chevron-down"></i></h5>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse mt-3" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sei tu a decidere. Alcuni host scelgono di inviare messaggi agli ospiti<br>solo nei momenti importanti, e ricorrono ad esempio a una breve nota al<br>check-in, mentre altri preferiscono incontrare di persona chi accolgono.<br>Troverai certamente uno stile che si adatti sia a te che agli ospiti
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {{-- altre domande vanno aggiunte dopo questo div --}}
+        
+                </div>
+            </div>
+        </div>
+        <div class="container bg-white py-4 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="path_to_your_image.jpg" alt="Immagine" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Hai altre domande ?</h3>
+                    <p>Ricevi le risposte da un SuperHost vicino a te </p>
+                    <button type="button" class="btn btn-outline-dark btn-transparent m-3">Trova un SuperHost</button>
+                </div>
+            </div>
+        </div>
+        
+    
     </div>
-</div>
+    <hr class="my-3 mt-5">
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Assistenza</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link-black">Centro Assistenza</a></li>
+                        <li><a href="#" class="link-black">Air Cover</a></li>
+                        <li><a href="#" class="link-black">Accessibilità</a></li>
+                        <li><a href="#" class="link-black">Opzioni di cancellazione</a></li>
+                        <li><a href="#" class="link-black">Covid-19</a></li>
+                        <li><a href="#" class="link-black">Segnala Bug</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link-black">BoolBnB.org</a></li>
+                        <li><a href="#" class="link-black">Contro la discriminazione</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Ospitare</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="link-black">Apri un BnB</a></li>
+                        <li><a href="#" class="link-black">BoolCover</a></li>
+                        <li><a href="#" class="link-black">Esplora ovunque</a></li>
+                        <li><a href="#" class="link-black">Vai al forum</a></li>
+                        <li><a href="#" class="link-black">Come ospitare</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>BoolBnB</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class=" link link-black">Newsroom</a></li>
+                        <li><a href="#" class="link-black">Scopri le funzionalità</a></li>
+                        <li><a href="#" class="link-black">Lettere dai fondatori</a></li>
+                        <li><a href="#" class="link-black">Opportunità di lavoro</a></li>
+                        <li><a href="#" class="link-black">Investitori</a></li>
+                        <li><a href="#" class="link-black">Gift Card</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr class="my-3 mt-5">
+            <div class="row">
+                <div class="col-md-12 ">
+                        <p class="text-muted">
+                            &copy; 2023 BoolBnB, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Termini</a> &middot; <a href="#">Mappa del  sito</a> &middot; <a href="#">Dettagli dell'azienda</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .social-links,.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.social-btn:hover {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 80px;
+}
+
+#twitter svg {
+  fill: #1da1f2;
+}
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github {
+  fill: #333;
+}
+.link-black {
+    color: #000000;
+    list-style: none;
+    text-decoration: none;
+  }
+</style>
+    
+
+  
+
+
+
+
 @endsection

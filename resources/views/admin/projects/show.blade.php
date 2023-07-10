@@ -4,7 +4,7 @@
 <h1>{{$project->title }}</h1>
 <a class="btn btn-primary mt-4" href="{{ route('admin.projects.index') }}">Torna Indietro</a>
 
-{{-- PROJECT IMAGE --}}
+
 
 <div class="post-image">
     @if ($project->image)
@@ -38,4 +38,3 @@
 @endsection
 
 
-{{-- 42:33 --}}

@@ -25,57 +25,65 @@
 
 <body>
     <div id="app">
-
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
-            <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">Laravel-auth</a>
-                <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="navbar-nav">
-                <div class="nav-item text-nowrap ms-2">
-                    <a class="nav-link" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </div>
-        </header>
-
         <div class="container-fluid vh-100">
             <div class="row h-100">
-                <!-- Definire solo parte del menu di navigazione inizialmente per poi
-        aggiungere i link necessari giorno per giorno
-        -->
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-info navbar-dark sidebar collapse">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
-                            - <li class="nav-item">
-                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('admin.dashboard') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
-                                </a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('admin.projects.index') }}">
-                                    <i class="fa-regular fa-folder-open"></i> Project
-                                </a>
-                            </li> 
-                        </ul>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.technologys.index' ? 'bg-secondary' : '' }}"
-                                href="{{ route('admin.technologys.index') }}">
-                                <i class="fa-solid fa-microchip"></i> Tecnologie
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.dashboard' ? '' : '' }}"
+                                href="{{ route('admin.dashboard') }}">
+                                <i class="fa-solid fa-house-signal" style="color: #050505;"></i> Host
                             </a>
-                        </li> --}}
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-regular fa-user" style="color: #0f0f10;"></i> Info Personali
+                                </a>
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-regular fa-user" style="color: #0f0f10;"></i> Messaggi
+                                </a>
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-solid fa-book-open" style="color: #000000;"></i> Tasse
+                                </a>
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-solid fa-money-bill-1-wave" style="color: #000000;"></i> Pagamenti 
+                                </a>
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-solid fa-key" style="color: #000000;"></i> Accessibilità
+                                </a>
+                              </li>
+                              <hr>
+                              <li class="nav-item">
+                                <a class="nav-link text-dark {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
+                                    <i class="fa-solid fa-book" style="color: #000000;"></i> Guida Host
+                                </a>
+                              </li>
+                              <hr>
+                              <a class="nav-link text-danger" href="{{ route('logout') }}"
+                              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                              {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                            </form>
+
+                        </ul>
 
 
                     </div>
@@ -88,6 +96,7 @@
         </div>
 
     </div>
+    
 </body>
 
 </html>
