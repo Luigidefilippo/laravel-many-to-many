@@ -126,7 +126,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                <h5 class="mb-0">Il mio alloggio è adatto a BoolBnB? <i class="bi bi-chevron-down"></i></h5>
+                                <h5 class="mb-0">Il mio alloggio è adatto a BoolBnB? <i class="fa-solid fa-chevron-down"></i></h5>
                             </button>
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse mt-3" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
@@ -141,7 +141,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading2">
                             <button class="accordion-button collapsed mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                <h5 class="mb-0">La disponibilità del mio alloggio deve essere costante? <i class="bi bi-chevron-down"></i></h5>
+                                <h5 class="mb-0">La disponibilità del mio alloggio deve essere costante? <i class="fa-solid fa-chevron-down"></i></i></h5>
                             </button>
                         </h2>
                         <div id="collapse2" class="accordion-collapse collapse mt-3" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
@@ -156,7 +156,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="heading3">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                <h5 class="mb-0">Quanto dovrei interagiere con gli ospiti <i class="bi bi-chevron-down"></i></h5>
+                                <h5 class="mb-0">Quanto dovrei interagiere con gli ospiti <i class="fa-solid fa-chevron-down"></i></h5>
                             </button>
                         </h2>
                         <div id="collapse3" class="accordion-collapse collapse mt-3" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
@@ -261,7 +261,10 @@
   justify-content: center;
   align-items: center;
 }
-
+ a{
+    text-decoration: none;
+    color: inherit
+ }
 .social-btn {
   cursor: pointer;
   height: 50px;
